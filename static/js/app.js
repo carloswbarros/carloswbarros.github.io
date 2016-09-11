@@ -92,7 +92,7 @@ $(document).ready(function(){
 				speed: 70 //50
 			}).reveal(900); //1000
 
-		}, 0);
+		}, 500);
 	});
 
 	// Scroll animations
