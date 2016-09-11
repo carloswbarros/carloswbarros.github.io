@@ -1,14 +1,5 @@
 vex.defaultOptions.className = 'vex-theme-wireframe';
 
-$.fn.extend({
-	animateCss: function (animationName) {
-		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		$(this).addClass('animated ' + animationName).one(animationEnd, function() {
-
-		});
-	}
-});
-
 $(document).ready(function(){
 
 	// Smooth scrolling of the links
@@ -65,7 +56,7 @@ $(document).ready(function(){
 						</div> \
 					</div>',
 			afterOpen: function($vexContent) {
-				$vexContent.animateCss('bounceInDown');
+				$vexContent.addClass('animated bounceInDown');
 				return $vexContent.append($vexContent);
 			},
 			contentCSS: {
@@ -80,9 +71,9 @@ $(document).ready(function(){
 	});
 
 	// Eggs
-	var egg = new Egg("a,m,a,z,i,n,g", function() {
+	/*var egg = new Egg("a,m,a,z,i,n,g", function() {
 		alert('I know I am. But thank you ^^');
-	}).listen();
+	}).listen();*/
 
 	// Scrollup
 	$.scrollUp({
